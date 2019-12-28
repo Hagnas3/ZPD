@@ -1,13 +1,36 @@
-
+<?php
+  include 'dbh.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="tex/css" href="style.css">
     <title></title>
   </head>
   <body>
-    <?php
-      echo "test";
-    ?>
+    <form action="search.php" method="post">
+      <input type="text" name="search" placeholder="Search">
+      <button type="submit" name="submit-search">Search</button>
+    </form>
+    <h1>Front page</h1>
+    <h2>all products:</h2>
+
+    <div class="product-container">
+      <?php
+        $sql = "SELECT * FROM product_info";
+        $result = mysqli_query($conn, $sql);
+        $queryResults = mysqli_num_rows($result);
+
+        if ($queryResults > 0) {
+          while ($row = mysqli_fetch_assoc($result)) {
+            echo "<div>
+                <h3>".$row['p_title']."</h3>
+                <p>".$row['p_description']."</p>
+            </div>";
+          }
+        }
+      ?>
+    </div>
   </body>
 </html>
