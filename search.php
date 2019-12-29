@@ -14,7 +14,7 @@
       <?php
         if (isset($_POST['submit-search'])) {
           $search = mysqli_real_escape_string($conn, $_POST['search']);
-          $sql = "SELECT * FROM product_info WHERE p_title LIKE '%$search%' OR p_description LIKE '%$search%'";
+          $sql = "SELECT * FROM products WHERE Title LIKE '%$search%' OR Description LIKE '%$search%'";
           $result = mysqli_query($conn, $sql);
           $queryResult = mysqli_num_rows($result);
 
