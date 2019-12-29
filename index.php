@@ -25,6 +25,7 @@
         if ($queryResults > 0) {
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<div>
+                <img src=".$row['img_dir'].">
                 <h3>".$row['Title']."</h3>
                 <p>".$row['Description']."</p>
             </div>";
