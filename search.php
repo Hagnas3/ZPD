@@ -21,8 +21,8 @@
           if ($queryResult > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
               echo "<div>
-                  <h3>".$row['p_title']."</h3>
-                  <p>".$row['p_description']."</p>
+                  <h3>".$row['Title']."</h3>
+                  <p>".$row['Description']."</p>
               </div>";
             }
           } else {
