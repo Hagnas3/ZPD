@@ -18,7 +18,7 @@
 
     <div class="product-container">
       <?php
-        $sql = "SELECT * FROM product_info";
+        $sql = "SELECT * FROM products";
         $result = mysqli_query($conn, $sql);
         $queryResults = mysqli_num_rows($result);
 
