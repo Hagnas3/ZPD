@@ -5,7 +5,10 @@ body {
   padding:0;
   color:white;
   background: #1b2838;
+<<<<<<< HEAD
   /* background:white; */
+=======
+>>>>>>> 124c8eb35dfa9dc256993602fb2639619bff7a80
 }
 /*
 #062726 - darkest
@@ -110,3 +113,13 @@ h1 {
   0% {top:0; opacity:0;}
   100% {top:0; right:-30px; opacity:1;}
 }
+<<<<<<< HEAD
+=======
+/*--- section 2 ---*/
+.banner {
+  background: url('assets/bg1.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+}
+>>>>>>> 124c8eb35dfa9dc256993602fb2639619bff7a80
